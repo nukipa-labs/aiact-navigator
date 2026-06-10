@@ -6,11 +6,39 @@ export const SITE = 'https://aiact-navigator.com';
 // Mirror of the editorial "last reviewed" date (schema-only signal).
 export const DATE_MODIFIED = '2026-06-09';
 
-// Named reviewer for E-E-A-T (author/reviewedBy).
+// Topics the hub demonstrably covers — an E-E-A-T expertise signal,
+// shared by the Organization and the editorial reviewer.
+const KNOWS_ABOUT = [
+  'EU AI Act',
+  'Regulation (EU) 2024/1689',
+  'AI governance',
+  'High-risk AI systems (Annex III)',
+  'General-purpose AI (GPAI) models',
+  'AI Act conformity assessment',
+  'AI Act transparency obligations',
+  'AI literacy (Article 4)',
+  'ISO/IEC 42001'
+];
+
+// Editorial reviewer for E-E-A-T (author/reviewedBy). Organization-level
+// (no individual named), enriched with subject-matter expertise signals.
 export const REVIEWED_BY = {
   '@type': 'Organization',
-  name: 'AI Act Navigator Team',
-  url: SITE
+  name: 'AI Act Navigator editorial team',
+  url: SITE,
+  description:
+    'Independent analysts who track the EU AI Act and its implementation, and review every page on this site against primary sources (EUR-Lex, the European Commission and the AI Office).',
+  knowsAbout: KNOWS_ABOUT
+} as const;
+
+// The site's address (the operating publisher's registered address).
+const ADDRESS = {
+  '@type': 'PostalAddress',
+  streetAddress: 'Gunta-Stölzl-Strasse 7',
+  postalCode: '80807',
+  addressLocality: 'München',
+  addressRegion: 'Bavaria',
+  addressCountry: 'DE'
 } as const;
 
 // The site's Organization, with address, imprint, VAT and social profiles.
@@ -23,6 +51,16 @@ export const ORGANIZATION = {
   logo: `${SITE}/brand/og.png`,
   description:
     'Plain-English guidance, free tools and templates for the EU AI Act (Regulation (EU) 2024/1689).',
+  foundingDate: '2025',
+  email: 'contact@nukipalabs.com',
+  knowsAbout: KNOWS_ABOUT,
+  address: ADDRESS,
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'editorial',
+    email: 'contact@nukipalabs.com',
+    availableLanguage: ['en']
+  },
   sameAs: [
     'https://github.com/nukipa-labs',
     'https://nukipalabs.com',
@@ -35,13 +73,7 @@ export const ORGANIZATION = {
     url: `${SITE}/legal/imprint`,
     email: 'contact@nukipalabs.com',
     vatID: 'DE456506273',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Gunta-Stölzl-Strasse 7',
-      postalCode: '80807',
-      addressLocality: 'München',
-      addressCountry: 'DE'
-    }
+    address: ADDRESS
   }
 };
 

@@ -15,7 +15,7 @@ import {
 import { webPage } from '@/lib/schema';
 import { RiskClassifier } from './RiskClassifier';
 
-const CANONICAL = 'https://ai-act-navigator.com/risk-classifier';
+const CANONICAL = 'https://aiact-navigator.com/risk-classifier';
 
 export const metadata: Metadata = {
   title: 'AI Act Risk Classifier: What Tier Is Your AI System? | AI Act Navigator',
@@ -119,13 +119,13 @@ export default function RiskClassifierPage() {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Home',
-                item: 'https://ai-act-navigator.com/'
+                item: 'https://aiact-navigator.com/'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Tools',
-                item: 'https://ai-act-navigator.com/tools'
+                item: 'https://aiact-navigator.com/tools'
               },
               {
                 '@type': 'ListItem',

@@ -16,7 +16,7 @@ import {
 import { webPage } from '@/lib/schema';
 import { ObligationsCalculator } from './ObligationsCalculator';
 
-const CANONICAL = 'https://ai-act-navigator.com/obligations';
+const CANONICAL = 'https://aiact-navigator.com/obligations';
 
 export const metadata: Metadata = {
   title: 'AI Act Obligations Checker: What Must You Do? | AI Act Navigator',
@@ -142,13 +142,13 @@ export default function ObligationsPage() {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Home',
-                item: 'https://ai-act-navigator.com/'
+                item: 'https://aiact-navigator.com/'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Tools',
-                item: 'https://ai-act-navigator.com/tools'
+                item: 'https://aiact-navigator.com/tools'
               },
               {
                 '@type': 'ListItem',
