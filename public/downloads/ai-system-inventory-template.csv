@@ -1,0 +1,5 @@
+system_id,system_name,vendor,role,intended_purpose,risk_tier,annex_iii_area,owner,data_processed,human_oversight_assigned,literacy_training_done,compliance_status,notes
+AI-001,Example CV screening tool,Acme HR Software Ltd,Deployer,Ranks and shortlists job applicants for recruiters,High-risk,Employment & worker management,Head of People,"Candidate CVs, contact details, work history",Yes,No,In progress,"Annex III area 4; FRIA not required (private deployer) but human oversight + worker notice apply"
+AI-002,Customer support chatbot,In-house,Both,Answers customer product questions on the website,Limited-transparency,,Support Lead,"Customer messages, order references",N/A,Yes,Compliant,"Art. 50: users are told they are chatting with an AI"
+AI-003,Spam / content filter,Built in email suite,Deployer,Filters inbound email for spam and malware,Minimal,,IT Manager,Email metadata,N/A,Yes,Compliant,"No mandatory AI Act obligations; voluntary good practice only"
+,,,,,,,,,,,,
