@@ -3,7 +3,7 @@ import { Container } from '@/components/ui/Container';
 import { Prose } from '@/components/ui/Prose';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | AI Act Navigator',
+  title: 'Privacy Policy',
   description:
     'How Nukipa Labs GmbH handles your personal data when you use AI Act Navigator, under the GDPR.',
   alternates: { canonical: '/legal/privacy' }

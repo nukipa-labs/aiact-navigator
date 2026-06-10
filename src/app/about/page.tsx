@@ -7,7 +7,7 @@ import { JsonLd } from '@/components/ui/JsonLd';
 import { webPage, breadcrumb } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'About and methodology: how we keep this accurate | AI Act Navigator',
+  title: 'About and methodology: how we keep this accurate',
   description:
     'AI Act Navigator is a free hub explaining the EU AI Act in plain English. How we source, update and keep it accurate.',
   alternates: { canonical: '/about' }

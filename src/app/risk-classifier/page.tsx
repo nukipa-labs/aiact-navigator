@@ -18,7 +18,7 @@ import { RiskClassifier } from './RiskClassifier';
 const CANONICAL = 'https://aiact-navigator.com/risk-classifier';
 
 export const metadata: Metadata = {
-  title: 'AI Act Risk Classifier: What Tier Is Your AI System? | AI Act Navigator',
+  title: 'AI Act Risk Classifier: What Tier Is Your AI System?',
   description:
     'Answer a few plain-English questions to find out your EU AI Act risk tier - prohibited, high-risk, limited/transparency or minimal - your role, and what to do next. Free, caveated guidance.',
   alternates: { canonical: '/risk-classifier' },

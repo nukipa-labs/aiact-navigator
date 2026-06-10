@@ -29,7 +29,7 @@ const SRC = {
 };
 
 export const metadata: Metadata = {
-  title: 'ISO/IEC 42001 and the EU AI Act: What It Covers and What It Does Not | AI Act Navigator',
+  title: 'ISO/IEC 42001 and the EU AI Act: What It Covers and What It Does Not',
   description:
     'ISO/IEC 42001 is a certifiable AI Management System standard - but it is not an EU harmonised standard and gives no automatic presumption of conformity with the AI Act. Plain-English explainer.',
   alternates: { canonical: '/iso-42001' },

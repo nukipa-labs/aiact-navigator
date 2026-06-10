@@ -3,7 +3,7 @@ import { Container } from '@/components/ui/Container';
 import { Prose } from '@/components/ui/Prose';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use | AI Act Navigator',
+  title: 'Terms of Use',
   description: 'The terms that govern your use of AI Act Navigator (aiact-navigator.com).',
   alternates: { canonical: '/legal/terms' }
 };

@@ -34,7 +34,7 @@ const ONE_LINE: Record<string, string> = {
 };
 
 export const metadata: Metadata = {
-  title: 'EU AI Act topics: plain-English guides by subject | AI Act Navigator',
+  title: 'EU AI Act topics: plain-English guides by subject',
   description:
     'Plain-English guides to key EU AI Act topics: prohibited practices, high-risk AI, GPAI, provider vs deployer, penalties, GDPR overlap and transparency obligations.',
   alternates: { canonical: '/topics' },

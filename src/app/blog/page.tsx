@@ -10,7 +10,7 @@ import { Container } from '@/components/ui/Container';
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title:       'All articles | AI Act Navigator',
+  title:       'All articles',
   description:
     'Every plain-English EU AI Act explainer and update from AI Act Navigator, in one place.'
 };

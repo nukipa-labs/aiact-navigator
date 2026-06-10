@@ -67,7 +67,7 @@ const FAQ = [
 ];
 
 export const metadata: Metadata = {
-  title: 'AI System Inventory Template (Free CSV) | AI Act Navigator',
+  title: 'AI System Inventory Template (Free CSV)',
   description:
     'A free CSV template for registering every AI system your organisation uses under the EU AI Act - with columns for risk tier, role, owner, oversight, and compliance status.',
   alternates: { canonical: '/ai-inventory' },

@@ -34,12 +34,12 @@ export function Hero() {
               </p>
             </RevealOnScroll>
             <RevealOnScroll delay={4}>
-              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
                 <Button href="/checklist" variant="primary">
                   Get the AI Act Checklist
                 </Button>
-                <Button href="/tools" variant="secondary">
-                  Explore AI Act tools &amp; resources
+                <Button href="/tools" variant="ghost">
+                  Explore the free tools &rarr;
                 </Button>
               </div>
             </RevealOnScroll>

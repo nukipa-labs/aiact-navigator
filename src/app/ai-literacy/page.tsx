@@ -28,7 +28,7 @@ const SRC = {
 };
 
 export const metadata: Metadata = {
-  title: 'AI Literacy Training (Article 4, EU AI Act): What It Requires | AI Act Navigator',
+  title: 'AI Literacy Training (Article 4, EU AI Act): What It Requires',
   description:
     'Article 4 AI literacy duty has been in force since 2 February 2025. Applies to all providers and deployers in scope, including non-EU entities. No prescribed curriculum - document tailored training.',
   alternates: { canonical: '/ai-literacy' },

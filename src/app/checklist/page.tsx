@@ -9,7 +9,7 @@ import { ChecklistForm } from '@/components/ChecklistForm';
 import { webPage, breadcrumb } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Free AI Act Readiness Checklist (PDF) | AI Act Navigator',
+  title: 'Free AI Act Readiness Checklist (PDF)',
   description:
     'A plain-English EU AI Act readiness checklist that walks you from "what is this?" to documented compliance. Free PDF, covering providers, deployers, and SMEs.',
   alternates: { canonical: '/checklist' }

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import { ContourBackground } from '@/components/ui/ContourBackground';
@@ -16,17 +17,16 @@ export function CTABanner() {
             <p className="mt-4 text-paper/80 text-base lg:text-lg">
               Free, plain-English updates. We watch Brussels so you don&apos;t.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="mt-8 flex flex-col items-center gap-4">
               <Button href="/checklist" variant="primary">
                 Get the AI Act Checklist
               </Button>
-              <Button
+              <Link
                 href="/subscribe"
-                variant="secondary"
-                className="!border-paper !text-paper hover:!bg-paper/10"
+                className="text-sm font-medium text-paper/85 link-underline hover:text-paper"
               >
-                Subscribe to The AI Act Brief
-              </Button>
+                Or just subscribe to The AI Act Brief &rarr;
+              </Link>
             </div>
           </div>
         </RevealOnScroll>

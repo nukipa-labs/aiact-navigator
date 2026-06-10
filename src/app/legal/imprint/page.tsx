@@ -3,7 +3,7 @@ import { Container } from '@/components/ui/Container';
 import { Prose } from '@/components/ui/Prose';
 
 export const metadata: Metadata = {
-  title: 'Imprint | AI Act Navigator',
+  title: 'Imprint',
   description: 'Imprint and provider information for AI Act Navigator, operated by Nukipa Labs GmbH.',
   alternates: { canonical: '/legal/imprint' }
 };

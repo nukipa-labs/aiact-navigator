@@ -1,0 +1,38 @@
+# AI Act Navigator
+
+> The free, plain-English hub for the EU AI Act (Regulation (EU) 2024/1689). Independent guidance, free tools and trustworthy updates for any company that builds or uses AI.
+
+AI Act Navigator explains the EU AI Act in plain English and gives away the tools to act on it: a risk-tier classifier, a provider-vs-deployer obligations checker, a high-risk (Annex III) lookup, a glossary, a living deadline tracker, and downloadable PDF guides. Independent (no software to sell), always-updated, and sourced to primary references (EUR-Lex, the European Commission, the EU AI Office). This is guidance, not legal advice. Not affiliated with the EU.
+
+Key facts the site is built on: the AI Act entered into force on 1 August 2024; prohibited practices (Art. 5) and the AI literacy duty (Art. 4) apply from 2 February 2025; GPAI, governance and penalties from 2 August 2025; most high-risk (Annex III) and transparency obligations from 2 August 2026; Annex I product rules from 2 August 2027. A proposed "Digital Omnibus" would postpone the Annex III high-risk date to 2 December 2027, but as of June 2026 it is not yet law.
+
+## Core guides
+- [What is the EU AI Act? — the complete guide](https://aiact-navigator.com/ai-act): Pillar explainer — risk tiers, who must comply, extraterritorial reach, GPAI, obligations, deadlines, penalties.
+- [EU AI Act timeline & deadlines](https://aiact-navigator.com/timeline): Living tracker of the phased application dates and the proposed Digital Omnibus changes.
+- [EU AI Act glossary](https://aiact-navigator.com/glossary): Plain-English definitions of the Act's key terms.
+
+## Free tools
+- [AI Act Risk-Tier Classifier](https://aiact-navigator.com/risk-classifier): Answer a few questions to find your AI system's risk tier (prohibited / high-risk / limited / minimal) and your role.
+- [Provider vs Deployer Obligations Checker](https://aiact-navigator.com/obligations): Your tailored obligations by role and risk tier, with article references.
+- [High-Risk AI Use Cases (Annex III)](https://aiact-navigator.com/high-risk): Searchable lookup of the high-risk areas and regulated-product categories.
+- [AI System Inventory](https://aiact-navigator.com/ai-inventory): A guide plus a ready-to-fill CSV template to register every AI system you build or use.
+- [AI Act Readiness Checklist (PDF)](https://aiact-navigator.com/checklist): The full readiness journey for providers, deployers and SMEs.
+
+## Topics & guides
+- [Prohibited AI practices (Article 5)](https://aiact-navigator.com/topics/prohibited-ai-practices)
+- [High-risk AI systems (Annex I & III)](https://aiact-navigator.com/topics/high-risk-ai-systems)
+- [General-purpose AI (GPAI) models](https://aiact-navigator.com/topics/general-purpose-ai)
+- [Provider vs deployer roles](https://aiact-navigator.com/topics/provider-vs-deployer)
+- [The EU AI Act for US & non-EU companies](https://aiact-navigator.com/topics/ai-act-for-us-companies)
+- [EU AI Act penalties and fines](https://aiact-navigator.com/topics/ai-act-penalties)
+- [EU AI Act vs GDPR](https://aiact-navigator.com/topics/ai-act-vs-gdpr)
+- [Transparency obligations (Article 50)](https://aiact-navigator.com/topics/transparency-obligations)
+
+## Governance
+- [AI governance for the EU AI Act](https://aiact-navigator.com/ai-governance): Frameworks, tooling and how governance maps to AI Act obligations.
+- [ISO/IEC 42001 and the EU AI Act](https://aiact-navigator.com/iso-42001): What the standard covers — and why it is not, on its own, a presumption of conformity.
+- [AI literacy training (Article 4)](https://aiact-navigator.com/ai-literacy): The in-force duty, who it applies to, and how to build a programme.
+
+## About
+- [About & methodology](https://aiact-navigator.com/about): Who we are, how we keep this accurate, and how we flag unsettled rules.
+- [The AI Act Brief newsletter](https://aiact-navigator.com/subscribe): Free plain-English updates as the rules move.

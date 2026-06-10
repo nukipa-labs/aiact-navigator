@@ -13,7 +13,7 @@ import { webPage } from '@/lib/schema';
 const PAGE_URL = 'https://aiact-navigator.com/tools';
 
 export const metadata: Metadata = {
-  title: 'EU AI Act Tools, Templates & Resources | AI Act Navigator',
+  title: 'EU AI Act Tools, Templates & Resources',
   description:
     'Free EU AI Act tools: risk-tier classifier, obligations checker, high-risk use case list, AI system inventory, readiness checklist, governance guides, ISO 42001 explainer, and more.',
   alternates: { canonical: '/tools' },

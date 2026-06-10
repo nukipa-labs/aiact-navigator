@@ -19,7 +19,7 @@ import { ObligationsCalculator } from './ObligationsCalculator';
 const CANONICAL = 'https://aiact-navigator.com/obligations';
 
 export const metadata: Metadata = {
-  title: 'AI Act Obligations Checker: What Must You Do? | AI Act Navigator',
+  title: 'AI Act Obligations Checker: What Must You Do?',
   description:
     'Your EU AI Act duties depend on your role and your risk tier. Answer a few questions and see exactly what applies to you - by article - and from when. Free.',
   alternates: { canonical: '/obligations' },

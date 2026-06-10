@@ -30,7 +30,7 @@ const SRC = {
 };
 
 export const metadata: Metadata = {
-  title: 'AI Governance for the EU AI Act: Framework, Tools and Obligations | AI Act Navigator',
+  title: 'AI Governance for the EU AI Act: Framework, Tools and Obligations',
   description:
     'How to build an AI governance framework that maps to EU AI Act obligations: inventory, risk classification, documentation, human oversight and monitoring. Plain-English guide.',
   alternates: { canonical: '/ai-governance' },

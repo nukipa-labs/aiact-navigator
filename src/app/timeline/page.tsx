@@ -29,7 +29,7 @@ const OMNIBUS_PROPOSAL =
   'https://digital-strategy.ec.europa.eu/en/library/digital-omnibus-ai-regulation-proposal';
 
 export const metadata: Metadata = {
-  title: 'EU AI Act Timeline & Deadlines (2025-2027) | AI Act Navigator',
+  title: 'EU AI Act Timeline & Deadlines (2025-2027)',
   description:
     'The phased EU AI Act deadlines: prohibited practices and AI literacy since 2 Feb 2025, GPAI and penalties since 2 Aug 2025, most high-risk and transparency obligations from 2 Aug 2026, and AI in regulated products from 2 Aug 2027. A living tracker, including the proposed Digital Omnibus postponements.',
   alternates: { canonical: '/timeline' },
