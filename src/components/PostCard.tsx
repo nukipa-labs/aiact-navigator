@@ -7,9 +7,9 @@ import type { SlimPost } from '@nukipa/site-sdk';
  * `SlimPost` shape from the SDK (`client.listPosts(...)` /
  * `client.listRelatedPosts(...)`); don't redefine it.
  *
- * Brand treatment (DESIGN.md > Cards): card surface, 1px sand border,
- * rounded-card, flat at rest, lift + amber border on hover. Title in
- * Spectral forest, excerpt in muted ink, date as a mono LastUpdated-style
+ * Brand treatment (DESIGN.md > Cards): card surface, 1px indigo-tinted
+ * border, rounded-card, flat at rest, lift + amber border on hover. Title
+ * in indigo primary, excerpt in muted ink, date as a mono LastUpdated-style
  * chip, optional folder badge.
  */
 export function PostCard({ post }: { post: SlimPost }) {

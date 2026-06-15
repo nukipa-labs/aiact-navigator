@@ -5,6 +5,7 @@ import { PostBody, renderSourcesList } from '@nukipa/post-renderer-react';
 import { getNukipaClient } from '@/lib/nukipa';
 import { PostCard } from '@/components/PostCard';
 import { GateForm, type GateFormProps } from '@/components/GateForm';
+import { PostIslands, type PostWidget } from '@/components/PostIslands';
 import { Container } from '@/components/ui/Container';
 
 export const revalidate = 60;
@@ -42,6 +43,24 @@ export default async function PostPage({ params }: Props) {
   // every island to dead HTML and breaks analytics + form submissions.
   const related     = await client.listRelatedPosts(slug, { limit: 3 });
   const sourcesHtml = renderSourcesList(post.sources ?? []);
+
+  // `widget` components are full self-contained HTML docs the gateway built;
+  // PostBody renders only an empty placeholder for them. Pull the html out
+  // here (server-side) and hand it to <PostIslands> to inject as an iframe.
+  // The SDK's component type doesn't surface `content`, so read it narrowly.
+  const widgets: PostWidget[] = ((post.components ?? []) as Array<{
+    id: string;
+    component_type?: string;
+    content?: { status?: string; html_content?: string };
+  }>)
+    .filter(
+      (c) =>
+        c.component_type === 'widget' &&
+        c.content?.status === 'ready' &&
+        typeof c.content?.html_content === 'string' &&
+        c.content.html_content.length > 0
+    )
+    .map((c) => ({ id: c.id, html: c.content!.html_content as string }));
 
   // Gating fields (`is_gated`, `gated_form_*`) are returned by the public
   // API on locked posts but aren't in this SDK version's FullPost type, so
@@ -133,6 +152,10 @@ export default async function PostPage({ params }: Props) {
               postId={post.id}
               lang={post.language ?? undefined}
             />
+            {/* Hydrate the islands PostBody leaves inert: interactive `widget`
+                iframes and `chart` canvases (see PostIslands). PostBody itself
+                only wires CTAs/forms/carousels. */}
+            <PostIslands widgets={widgets} />
             {sourcesHtml && <div dangerouslySetInnerHTML={{ __html: sourcesHtml }} />}
           </div>
 

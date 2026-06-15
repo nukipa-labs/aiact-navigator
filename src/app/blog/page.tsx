@@ -10,9 +10,10 @@ import { Container } from '@/components/ui/Container';
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title:       'All articles',
+  title:       'EU AI Act Insights',
   description:
-    'Every plain-English EU AI Act explainer and update from AI Act Navigator, in one place.'
+    'Plain-English EU AI Act explainers and updates: risk tiers, provider vs deployer obligations, the AI Act timeline and what each change means for you.',
+  alternates: { canonical: '/blog' }
 };
 
 export default async function BlogIndex() {
@@ -24,21 +25,14 @@ export default async function BlogIndex() {
       <Container>
         <header className="mb-12 max-w-2xl">
           <p className="mb-3 font-body text-xs font-semibold uppercase tracking-[0.14em] text-accent-deep">
-            From the Brief
+            Insights
           </p>
           <h1 className="font-display text-4xl font-semibold tracking-[-0.01em] text-ink lg:text-5xl">
-            All articles
+            EU AI Act Insights
           </h1>
           <p className="mt-4 font-body text-base leading-relaxed text-[color:var(--color-text-muted)] lg:text-lg">
-            Plain-English EU AI Act explainers and updates. New entries land here as
-            the rules move. For the regulatory updates on their own, see{' '}
-            <Link
-              href="/news"
-              className="font-medium text-primary underline decoration-line underline-offset-2 hover:decoration-accent-deep"
-            >
-              The AI Act Brief
-            </Link>
-            .
+            Plain-English EU AI Act explainers and updates, written for the people
+            who have to comply. New entries land here as the rules move.
           </p>
         </header>
 

@@ -41,6 +41,10 @@ export const NAV_GROUPS: NavGroup[] = [
     ]
   },
   {
+    label: 'Insights',
+    href: '/blog'
+  },
+  {
     label: 'About',
     href: '/about'
   }
@@ -58,7 +62,8 @@ export const FOOTER_COLUMNS: { heading: string; links: NavLink[] }[] = [
       { label: 'What is the EU AI Act?', href: '/ai-act' },
       { label: 'Timeline & Deadlines', href: '/timeline' },
       { label: 'Topics & Guides', href: '/topics' },
-      { label: 'Glossary', href: '/glossary' }
+      { label: 'Glossary', href: '/glossary' },
+      { label: 'Insights', href: '/blog' }
     ]
   },
   {

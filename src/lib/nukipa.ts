@@ -25,6 +25,16 @@ if (!GATEWAY_URL) {
 
 const TENANT_HOST = process.env.NUKIPA_TENANT_HOST?.trim() || null;
 
+// Local/dev hosts can't resolve a tenant on the gateway, so fall back to
+// NUKIPA_TENANT_HOST for them. Real request hosts (production + custom
+// domains) still win, keeping the GSC verification behaviour intact.
+const LOCAL_HOST_RE = /^(localhost|127\.0\.0\.1|0\.0\.0\.0|\[::1\])(:\d+)?$/i;
+function pickHost(reqHost: string | null | undefined): string {
+  const h = reqHost?.trim() || '';
+  if (!h || LOCAL_HOST_RE.test(h)) return TENANT_HOST || h;
+  return h;
+}
+
 /*
  * Host-resolution priority: ACTUAL visitor host first, then
  * NUKIPA_TENANT_HOST as a fallback. The env-var override used to
@@ -44,7 +54,7 @@ export async function getNukipaClient(): Promise<NukipaClient> {
   const h = await headers();
   return createNukipaClient({
     gatewayUrl: GATEWAY_URL!,
-    getHost:    () => h.get('x-forwarded-host') || h.get('host') || TENANT_HOST || ''
+    getHost:    () => pickHost(h.get('x-forwarded-host') || h.get('host'))
   });
 }
 
@@ -52,7 +62,8 @@ export async function getNukipaClient(): Promise<NukipaClient> {
 export function getMiddlewareClient(req: NextRequest): NukipaClient {
   return createNukipaClient({
     gatewayUrl:   GATEWAY_URL!,
-    getHost:      () => req.headers.get('x-forwarded-host') || req.headers.get('host') || TENANT_HOST || '',
+    // pickHost: real request host wins; local/empty falls back to TENANT_HOST.
+    getHost:      () => pickHost(req.headers.get('x-forwarded-host') || req.headers.get('host')),
     // Real client IP on Vercel. x-forwarded-for's first entry is the client;
     // x-real-ip is a Vercel-set backstop. (Next 15 removed NextRequest.ip.)
     getIp:        () => req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()

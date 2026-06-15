@@ -70,6 +70,15 @@
   --duration-slow:    320ms;
   --duration-content: 480ms;
   --duration-glacial: 30s;
+
+  /* Brand aliases the @nukipa/post-content stylesheet reads (bp-* components).
+     Mapped to the AI Act indigo palette; without these the components fall
+     back to a default blue theme. */
+  --color-text:             #1E1B4B;  /* body ink */
+  --color-text-muted:       #54526E;
+  --color-primary-contrast: #FAFAFD;  /* text on primary fills */
+  --color-dark:             #15132E;  /* pre/code blocks */
+  --color-on-dark:          #EAEAF6;
 }
 
 html, body {
@@ -246,8 +255,13 @@ h1, h2, h3, h4 {
   color: var(--color-muted);
   margin: 1em 0;
 }
-.prose-body ul, .prose-body ol { padding-left: 1.5em; margin: 0 0 1em; }
-.prose-body li { margin: 0.25em 0; }
+/* Tailwind v4 preflight resets ul/ol to list-style:none; restore markers
+   so markdown bullets/numbers render in the blog body. */
+.prose-body ul { padding-left: 1.5em; margin: 0 0 1em; list-style: disc; }
+.prose-body ol { padding-left: 1.5em; margin: 0 0 1em; list-style: decimal; }
+.prose-body ul ul { list-style: circle; margin: 0.25em 0; }
+.prose-body li { margin: 0.25em 0; padding-left: 0.25em; }
+.prose-body li::marker { color: var(--color-accent-deep); }
 
 /* =========================================================================
    prefers-reduced-motion - kill transforms + drift, keep opacity.

@@ -8,6 +8,9 @@ import { ORGANIZATION, WEBSITE } from '@/lib/schema';
 import { displayFont, bodyFont, monoFont } from '@/lib/fonts';
 import { getNukipaClient } from '@/lib/nukipa';
 import './globals.css';
+// Styles for CMS post components (bp-* callouts, steps, tables, charts, FAQ…).
+// Imported AFTER globals.css so it lands after Tailwind preflight.
+import '@nukipa/post-content/styles.css';
 
 // PLATFORM CONTRACT: <NukipaFeedback /> must remain inside <body> for the
 // design-review feedback loop. Do not remove.
