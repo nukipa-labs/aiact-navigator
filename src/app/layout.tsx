@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { headers } from 'next/headers';
+import { nukipaBeaconScript } from '@nukipa/site-sdk';
 import { NukipaFeedback } from '@/components/NukipaFeedback';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
@@ -74,7 +76,19 @@ export async function generateMetadata(): Promise<Metadata> {
     : baseMetadata;
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // Cookieless proof-of-JS beacon. middleware.ts mints the per-pageview nonce
+  // and exposes it on x-nukipa-nonce; we read it and emit a tiny inline script
+  // that confirms a REAL browser rendered the page (POST to the gateway's
+  // public confirm route) so no-JS scrapers can be excluded from human counts.
+  // No cookies / storage / fingerprint → out of ePrivacy/GDPR scope. Reading
+  // the per-request nonce makes tracked pages render dynamically (a per-pageview
+  // token can't live in a cached page anyway).
+  const nonce   = (await headers()).get('x-nukipa-nonce');
+  const gateway = (process.env.NUKIPA_GATEWAY_URL || '').replace(/\/+$/, '');
+  const beacon  = nonce && gateway
+    ? nukipaBeaconScript({ nonce, endpoint: `${gateway}/public/v1/signals/visits/confirm` })
+    : null;
   return (
     <html
       lang="en"
@@ -95,6 +109,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <CookieBanner />
         <NukipaFeedback />
+        {beacon ? <script dangerouslySetInnerHTML={{ __html: beacon }} /> : null}
       </body>
     </html>
   );
