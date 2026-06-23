@@ -29,6 +29,20 @@
   var tenant  = script && script.dataset.tenant || '';
   var label   = script && script.dataset.label  || 'Feedback';
 
+  // Show the feedback widget ONLY on platform preview/staging hosts — the
+  // design-review loop runs on *.sites.nukipa.io / a Vercel preview / local
+  // dev. On a connected custom or production domain (anything else) it stays
+  // hidden. Fail CLOSED: an unconfigured deploy on a custom domain must NOT
+  // show the widget, so this gate is host-based and does not depend on the
+  // data-tenant attribute being set.
+  var host = (location && location.hostname || '').toLowerCase();
+  var isPreviewHost =
+    host === 'localhost' ||
+    host === '127.0.0.1' ||
+    host.endsWith('.nukipa.io') ||
+    host.endsWith('.vercel.app');
+  if (!isPreviewHost) return;
+
   var HOST_ID     = '__nukipa-feedback__';
   var STORAGE_KEY = 'nukipa_feedback_v1';
 
